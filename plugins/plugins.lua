@@ -22,7 +22,7 @@ local function plugin_exists( name )
 end
 
 local function list_all_plugins(only_enabled)
-  local tmp = '\n\n@BeyondTeam'
+  local tmp = '\n\n'
   local text = ''
   local nsum = 0
   for k, v in pairs( plugins_names( )) do
@@ -43,7 +43,7 @@ local function list_all_plugins(only_enabled)
       text = text..nsum..'.'..status..' '..v..' \n'
     end
   end
-  local text = text..'\n\n'..nsum..' plugins installed\n\n'..nact..' plugins enabled\n\n'..nsum-nact..' plugins disabled'..tmp
+  local text = text..'\n\n'..nsum..' <b>plugins</b> <b>installed</b>\n\n'..nact..' <b>plugins</b> <b>enabled</b>\n\n'..nsum-nact..' <b>plugins</b> <b>disabled</b>'..tmp
   return text
 end
 
@@ -68,7 +68,7 @@ local function list_plugins(only_enabled)
      -- text = text..v..'  '..status..'\n'
     end
   end
-  local text = text.."\nAll Plugins Reloaded\n\n"..nact.." Plugins Enabled\n"..nsum.." Plugins Installed\n\n@BeyondTeam"
+  local text = text.."\n<b>All</b> <b>Plugins</b> <b>Reloaded</b>\n\n"..nact.." <b>Plugins</b> <b>Enabled</b>\n"..nsum.." <b>Plugins</b> <b>Installed</b>\n\n"
 return text
 end
 
