@@ -1,7 +1,7 @@
 do
     
 function run(msg, matches)
-  local help = [[Beyond Self Commands
+  local help = [[<b>Master</b> Self Commands
 
 🔴دستورات مدیریتی ربات👇
 
@@ -108,11 +108,11 @@ function run(msg, matches)
 
 🔴!addplugin name.lua text plugin
 🔹افزودن افزونه به سرور بدون رفتن به سرور از طریق تلگرام با دستور بالا
-مثال: !addplugin BeyondTeam.lua متن پلاگین
+مثال: !addplugin openplugin.lua متن پلاگین
 
 🔴!delplugin nameplugin
 🔹حذف افزونه بدون رفتن به سرور از طریق تلگرام بدون پسوند.lua
-مثال: !delplugin BeyondTeam
+مثال: !delplugin openplugin
 
 🔴!weather city
 🔹دریافت وضعیت آب و هوای شهر مورد نظر
@@ -128,11 +128,11 @@ function run(msg, matches)
 مثال : !clean msg 100
 
 ➖➖➖➖➖➖
-Team Channel : 😎@BeyondTeam 😎
+Team Channel : 😎@pedaret 😎
 ➖➖➖➖➖➖]]
     if matches[1] == 'help' and is_sudo(msg) then
       send_large_msg("user#id"..msg.from.id, help)      
-   return 'Help was sent in your private message'
+   return '<b>Help</b> was sent in your <b>private</b> <b>message</b>'
     end
 end 
 
